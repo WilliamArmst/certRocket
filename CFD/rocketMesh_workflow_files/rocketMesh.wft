@@ -1,0 +1,301 @@
+{
+    "workflow": {
+        "version": "24.2",
+        "ROOT": {
+            "TaskObject:TaskObject1": {
+                "Arguments": {
+                    "FileName": "C:\\Users\\William\\Desktop\\Rocketry\\certRocket\\AnsysSim_files\\dp0\\Geom-2\\DM\\Geom-2.scdoc",
+                    "LengthUnit": "mm",
+                    "NumParts": "1"
+                },
+                "CommandName": "ImportGeometry",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "_name_": "Import Geometry"
+            },
+            "TaskObject:TaskObject2": {
+                "CommandName": "AddLocalSizingWTM",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound",
+                "_name_": "Add Local Sizing"
+            },
+            "TaskObject:TaskObject3": {
+                "Arguments": {
+                    "CFDSurfaceMeshControls": {
+                        "CellsPerGap": "3",
+                        "MaxSize": "150",
+                        "MinSize": "2",
+                        "ScopeProximityTo": "faces-and-edges"
+                    },
+                    "ExecuteShareTopology": "No",
+                    "OriginalZones": [
+                        "farfield",
+                        "symmetry",
+                        "rocketwalls",
+                        "nosecone-rocketwalls-enclosure-enclosure11"
+                    ]
+                },
+                "CheckPoint": "default-on",
+                "CommandName": "GenerateTheSurfaceMeshWTM",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "_name_": "Generate the Surface Mesh"
+            },
+            "TaskObject:TaskObject4": {
+                "Arguments": {
+                    "NonConformal": "No",
+                    "OldZoneList": [
+                        "farfield",
+                        "symmetry"
+                    ],
+                    "SetupType": "The geometry consists of only fluid regions with no voids"
+                },
+                "CommandName": "GeometrySetup",
+                "InactiveTaskList": [
+                    "TaskObject5",
+                    "TaskObject6",
+                    "TaskObject8"
+                ],
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskList": [
+                    "TaskObject7"
+                ],
+                "TaskType": "Conditional",
+                "_name_": "Describe Geometry"
+            },
+            "TaskObject:TaskObject5": {
+                "CheckPoint": "default-on",
+                "CommandName": "ShareTopology",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "_name_": "Apply Share Topology"
+            },
+            "TaskObject:TaskObject6": {
+                "CommandName": "Capping",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound",
+                "_name_": "Enclose Fluid Regions (Capping)"
+            },
+            "TaskObject:TaskObject7": {
+                "CommandName": "UpdateBoundaries",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "_name_": "Update Boundaries"
+            },
+            "TaskObject:TaskObject8": {
+                "CheckPoint": "default-on",
+                "CommandName": "CreateRegions",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "_name_": "Create Regions"
+            },
+            "TaskObject:TaskObject9": {
+                "CommandName": "UpdateRegions",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "_name_": "Update Regions"
+            },
+            "TaskObject:TaskObject10": {
+                "Arguments": "",
+                "CommandName": "AddBoundaryLayers",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskList": [
+                    "TaskObject15"
+                ],
+                "TaskType": "Compound",
+                "_name_": "Add Boundary Layers"
+            },
+            "TaskObject:TaskObject11": {
+                "Arguments": {
+                    "VolumeFill": "poly-hexcore",
+                    "VolumeFillControls": {
+                        "HexMaxSize": "128"
+                    }
+                },
+                "CheckPoint": "default-on",
+                "CommandName": "GenerateTheVolumeMeshWTM",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Simple",
+                "_name_": "Generate the Volume Mesh"
+            },
+            "TaskObject:TaskObject12": {
+                "Arguments": "",
+                "CommandName": "CreateLocalRefinementRegions",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskList": [
+                    "TaskObject13",
+                    "TaskObject14"
+                ],
+                "TaskType": "Compound",
+                "_name_": "Create Local Refinement Regions"
+            },
+            "TaskObject:TaskObject13": {
+                "Arguments": {
+                    "Axis": {
+                        "X-Comp": "0",
+                        "Y-Comp": "0",
+                        "Z-Comp": "1"
+                    },
+                    "BOIMaxSize": "80",
+                    "BOISizeName": "main-refinement",
+                    "BoundingBoxObject": {
+                        "SizeRelativeLength": "Ratio relative to geometry size",
+                        "Xmax": "0",
+                        "XmaxRatio": "0.10000000000000001",
+                        "Xmin": "0",
+                        "XminRatio": "0.10000000000000001",
+                        "Ymax": "0",
+                        "YmaxRatio": "0.10000000000000001",
+                        "Ymin": "0",
+                        "YminRatio": "0.10000000000000001",
+                        "Zmax": "0",
+                        "ZmaxRatio": "0.10000000000000001",
+                        "Zmin": "0",
+                        "ZminRatio": "0.10000000000000001"
+                    },
+                    "CreationMethod": "Offset Surface",
+                    "CylinderObject": {
+                        "HeightBackInc": "0",
+                        "HeightFrontInc": "0",
+                        "Length": "2482",
+                        "Options": "Zone, Vector and Length",
+                        "Radius1": "620.5",
+                        "Radius2": "620.5",
+                        "X1": "0",
+                        "X2": "2482",
+                        "Y1": "0",
+                        "Y2": "0",
+                        "Z1": "0",
+                        "Z2": "0"
+                    },
+                    "LabelSelectionList": [
+                        "rocketwalls"
+                    ],
+                    "OffsetObject": {
+                        "AspectRatio": "5",
+                        "BoundaryLayerHeight": "320",
+                        "BoundaryLayerLevels": "1",
+                        "CrossWakeGrowthFactor": "1.1000000000000001",
+                        "DefeaturingSize": "20",
+                        "FirstHeight": "0.01",
+                        "FlipDirection": "true",
+                        "FlowDirection": "Y",
+                        "LastRatioPercentage": "20",
+                        "MptMethodType": "Automatic",
+                        "NumberOfLayers": "4",
+                        "OffsetMethodType": "uniform",
+                        "Rate": "1.2",
+                        "ShowCoordinates": "true",
+                        "WakeGrowthFactor": "1.5",
+                        "WakeLevels": "1",
+                        "X": "0",
+                        "Y": "0",
+                        "Z": "0"
+                    },
+                    "RefinementRegionsName": "main-refinement",
+                    "SelectionType": "label",
+                    "VolumeFill": "hexcore"
+                },
+                "CommandName": "CreateLocalRefinementRegions",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound Child",
+                "_name_": "main-refinement"
+            },
+            "TaskObject:TaskObject14": {
+                "Arguments": {
+                    "BOIMaxSize": "80",
+                    "BOISizeName": "nosecone-refinement",
+                    "CreationMethod": "Offset Surface",
+                    "LabelSelectionList": [
+                        "nosecone"
+                    ],
+                    "OffsetObject": {
+                        "BoundaryLayerHeight": "124.09124755859375",
+                        "DefeaturingSize": "20",
+                        "FlipDirection": "true",
+                        "FlowDirection": "Y",
+                        "WakeGrowthFactor": "1.5",
+                        "WakeLevels": "1"
+                    },
+                    "RefinementRegionsName": "nosecone-refinement"
+                },
+                "CommandName": "CreateLocalRefinementRegions",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound Child",
+                "_name_": "nosecone-refinement"
+            },
+            "TaskObject:TaskObject15": {
+                "Arguments": {
+                    "BLControlName": "smooth-transition_1",
+                    "BLRegionList": [
+                        "enclosure-enclosure11"
+                    ],
+                    "BLZoneList": [
+                        "nosecone-rocketwalls-enclosure-enclosure11",
+                        "rocketwalls"
+                    ],
+                    "LocalPrismPreferences": {
+                        "Continuous": "Continuous"
+                    },
+                    "Rate": "1.1000000000000001"
+                },
+                "CommandName": "AddBoundaryLayers",
+                "ObjectPath": "",
+                "State": "Out-of-date",
+                "TaskType": "Compound Child",
+                "_name_": "smooth-transition_1"
+            },
+            "Workflow": {
+                "CurrentTask": "TaskObject11",
+                "TaskList": [
+                    "TaskObject1",
+                    "TaskObject2",
+                    "TaskObject12",
+                    "TaskObject3",
+                    "TaskObject4",
+                    "TaskObject9",
+                    "TaskObject10",
+                    "TaskObject11"
+                ],
+                "WorkflowType": "Watertight Geometry"
+            }
+        }
+    },
+    "meshing": {
+        "version": "24.2",
+        "ROOT": {
+            "GlobalSettings": {
+                "AreaUnit": "mm^2",
+                "EnableCleanCAD": "true",
+                "EnableComplexMeshing": "false",
+                "InitialVersion": "24.2",
+                "LengthUnit": "mm",
+                "NormalMode": "false",
+                "VolumeUnit": "mm^3"
+            }
+        }
+    },
+    "PartManagement": {
+        "version": "24.2",
+        "ROOT": {
+            "Node:Node1": {
+                "Name": "Meshing Model",
+                "_name_": "Meshing Model"
+            }
+        }
+    }
+}

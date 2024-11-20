@@ -1,2 +1,2 @@
-AnsysSim_files/**/*
-$rpr_data/**/*
+CFD/AnsysSim_files/**/*
+CFD/$rpr_data/**/*
