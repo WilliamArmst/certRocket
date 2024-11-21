@@ -1,0 +1,109 @@
+Auto-Transcript Start Time:  18:25:04, 20 Nov 2024 Mountain Standard Time 
+Current Directory: "C:\Scratch\WA\certRocket\CFD"
+
+              Welcome to ANSYS Fluent 2024 R1
+
+              Copyright 1987-2024 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Nov 22 2023 10:31:01 EST  Build Id: 10184  
+ 
+Connected License Server List:	1055@plicsvr-ansys.mines.edu
+
+     --------------------------------------------------------------
+     This is an academic version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "CT156-36-2022" (win64).
+
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core   O.S.         PID    Vendor                                  
+-----------------------------------------------------------------------------------------
+n23   CT156-36-2022  24/24  Windows-x64  29580  12th Gen Intel(R) Core(TM) i9-12900K    
+n22   CT156-36-2022  23/24  Windows-x64  45016  12th Gen Intel(R) Core(TM) i9-12900K    
+n21   CT156-36-2022  22/24  Windows-x64  25740  12th Gen Intel(R) Core(TM) i9-12900K    
+n20   CT156-36-2022  21/24  Windows-x64  53340  12th Gen Intel(R) Core(TM) i9-12900K    
+n19   CT156-36-2022  20/24  Windows-x64  33424  12th Gen Intel(R) Core(TM) i9-12900K    
+n18   CT156-36-2022  19/24  Windows-x64  16512  12th Gen Intel(R) Core(TM) i9-12900K    
+n17   CT156-36-2022  18/24  Windows-x64  55064  12th Gen Intel(R) Core(TM) i9-12900K    
+n16   CT156-36-2022  17/24  Windows-x64  37468  12th Gen Intel(R) Core(TM) i9-12900K    
+n15   CT156-36-2022  16/24  Windows-x64  26996  12th Gen Intel(R) Core(TM) i9-12900K    
+n14   CT156-36-2022  15/24  Windows-x64  12680  12th Gen Intel(R) Core(TM) i9-12900K    
+n13   CT156-36-2022  14/24  Windows-x64  35032  12th Gen Intel(R) Core(TM) i9-12900K    
+n12   CT156-36-2022  13/24  Windows-x64  8804   12th Gen Intel(R) Core(TM) i9-12900K    
+n11   CT156-36-2022  12/24  Windows-x64  37848  12th Gen Intel(R) Core(TM) i9-12900K    
+n10   CT156-36-2022  11/24  Windows-x64  6096   12th Gen Intel(R) Core(TM) i9-12900K    
+n9    CT156-36-2022  10/24  Windows-x64  51924  12th Gen Intel(R) Core(TM) i9-12900K    
+n8    CT156-36-2022  9/24   Windows-x64  3996   12th Gen Intel(R) Core(TM) i9-12900K    
+n7    CT156-36-2022  8/24   Windows-x64  38576  12th Gen Intel(R) Core(TM) i9-12900K    
+n6    CT156-36-2022  7/24   Windows-x64  28844  12th Gen Intel(R) Core(TM) i9-12900K    
+n5    CT156-36-2022  6/24   Windows-x64  34076  12th Gen Intel(R) Core(TM) i9-12900K    
+n4    CT156-36-2022  5/24   Windows-x64  33628  12th Gen Intel(R) Core(TM) i9-12900K    
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core   O.S.         PID    Vendor                                  
+-----------------------------------------------------------------------------------------
+n3    CT156-36-2022  4/24   Windows-x64  9840   12th Gen Intel(R) Core(TM) i9-12900K    
+n2    CT156-36-2022  3/24   Windows-x64  19960  12th Gen Intel(R) Core(TM) i9-12900K    
+n1    CT156-36-2022  2/24   Windows-x64  2944   12th Gen Intel(R) Core(TM) i9-12900K    
+n0*   CT156-36-2022  1/24   Windows-x64  46616  12th Gen Intel(R) Core(TM) i9-12900K    
+host  CT156-36-2022         Windows-x64  16476  12th Gen Intel(R) Core(TM) i9-12900K    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-----------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Scratch\\WA\\certRocket\\CFD\\cleanup-fluent-CT156-36-2022-16476.bat
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+Meshing> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Mesh...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "rocketMesh.msh.h5") "All Files (*)")
+Reading "C:/Scratch/WA/certRocket/CFD/rocketMesh.msh.h5" ...
+3D mesh
+nodes: 159127
+edges: 1003
+faces: 222569 
+cells: 43431 
+reading 3 node zones
+reading 8 edge zones
+reading 5 face zones
+reading 1 cell zones
+reading boundary layer flags...
+updating sub-domains...
+done.
+generating pointers...done.
+extracting boundary entities...
+ 25274 boundary nodes.
+ 9338 boundary faces.
+ 4 boundary face zones.
+done.
+generating cells...done.
+analyzing boundary connectivity...done.
+Illegitimate input at /GlobalSettings; UseAllowedValues
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /TaskObject; CheckPoint
+Illegitimate input at /Workflow; WorkflowType
+/exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  18:26:57, 20 Nov 2024 Mountain Standard Time 
+Total Transcript Time: 1 Minute 53 Second.

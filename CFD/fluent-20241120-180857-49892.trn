@@ -1,0 +1,1552 @@
+Auto-Transcript Start Time:  18:08:57, 20 Nov 2024 Mountain Standard Time 
+Current Directory: "C:\Scratch\WA\certRocket\CFD"
+
+              Welcome to ANSYS Fluent 2024 R1
+
+              Copyright 1987-2024 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Nov 22 2023 10:31:01 EST  Build Id: 10184  
+ 
+Connected License Server List:	1055@plicsvr-ansys.mines.edu
+
+     --------------------------------------------------------------
+     This is an academic version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "CT156-36-2022" (win64).
+
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core   O.S.         PID    Vendor                                  
+-----------------------------------------------------------------------------------------
+n23   CT156-36-2022  24/24  Windows-x64  26452  12th Gen Intel(R) Core(TM) i9-12900K    
+n22   CT156-36-2022  23/24  Windows-x64  41972  12th Gen Intel(R) Core(TM) i9-12900K    
+n21   CT156-36-2022  22/24  Windows-x64  51188  12th Gen Intel(R) Core(TM) i9-12900K    
+n20   CT156-36-2022  21/24  Windows-x64  40588  12th Gen Intel(R) Core(TM) i9-12900K    
+n19   CT156-36-2022  20/24  Windows-x64  1304   12th Gen Intel(R) Core(TM) i9-12900K    
+n18   CT156-36-2022  19/24  Windows-x64  29556  12th Gen Intel(R) Core(TM) i9-12900K    
+n17   CT156-36-2022  18/24  Windows-x64  27800  12th Gen Intel(R) Core(TM) i9-12900K    
+n16   CT156-36-2022  17/24  Windows-x64  43628  12th Gen Intel(R) Core(TM) i9-12900K    
+n15   CT156-36-2022  16/24  Windows-x64  30932  12th Gen Intel(R) Core(TM) i9-12900K    
+n14   CT156-36-2022  15/24  Windows-x64  21304  12th Gen Intel(R) Core(TM) i9-12900K    
+n13   CT156-36-2022  14/24  Windows-x64  51372  12th Gen Intel(R) Core(TM) i9-12900K    
+n12   CT156-36-2022  13/24  Windows-x64  40128  12th Gen Intel(R) Core(TM) i9-12900K    
+n11   CT156-36-2022  12/24  Windows-x64  38232  12th Gen Intel(R) Core(TM) i9-12900K    
+n10   CT156-36-2022  11/24  Windows-x64  39968  12th Gen Intel(R) Core(TM) i9-12900K    
+n9    CT156-36-2022  10/24  Windows-x64  5728   12th Gen Intel(R) Core(TM) i9-12900K    
+n8    CT156-36-2022  9/24   Windows-x64  54976  12th Gen Intel(R) Core(TM) i9-12900K    
+n7    CT156-36-2022  8/24   Windows-x64  51080  12th Gen Intel(R) Core(TM) i9-12900K    
+n6    CT156-36-2022  7/24   Windows-x64  7408   12th Gen Intel(R) Core(TM) i9-12900K    
+n5    CT156-36-2022  6/24   Windows-x64  36360  12th Gen Intel(R) Core(TM) i9-12900K    
+n4    CT156-36-2022  5/24   Windows-x64  3708   12th Gen Intel(R) Core(TM) i9-12900K    
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core   O.S.         PID    Vendor                                  
+-----------------------------------------------------------------------------------------
+n3    CT156-36-2022  4/24   Windows-x64  37152  12th Gen Intel(R) Core(TM) i9-12900K    
+n2    CT156-36-2022  3/24   Windows-x64  4764   12th Gen Intel(R) Core(TM) i9-12900K    
+n1    CT156-36-2022  2/24   Windows-x64  33148  12th Gen Intel(R) Core(TM) i9-12900K    
+n0*   CT156-36-2022  1/24   Windows-x64  17516  12th Gen Intel(R) Core(TM) i9-12900K    
+host  CT156-36-2022         Windows-x64  43576  12th Gen Intel(R) Core(TM) i9-12900K    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-----------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Scratch\\WA\\certRocket\\CFD\\cleanup-fluent-CT156-36-2022-43576.bat
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+Reading journal file C:\Users\m10923578\AppData\Local\Temp\70256981-f719-46e7-9872-54cc730c22ec.jou...
+
+> /file/set-tui-version "24.1"
+
+> (%py-exec "workflow.InitializeWorkflow(WorkflowType = r'Watertight Geometry')")
+()
+
+
+> (%py-exec "workflow.TaskObject['Import Geometry'].Arguments.setState({r'FileName': r'C:\Scratch\WA\certRocket\CFD\2023_Full Rocket.scdoc', r'LengthUnit': r'mm',})")
+()
+
+
+> (%py-exec "workflow.TaskObject['Import Geometry'].Execute()")
+
+Importing one geom object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\v241\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by m10923578 on CT156-36-2022 winx64 on Wed Nov 20 18:09:32 2024
+    using Python 3.10.9 (remotes/origin/4e018266dafe29ec2836492d71d245fcfd366d07-dirty:4e018266, Jan  3 2) [MSC v.1920 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Nov 27 2023 11:54:13
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892/out173215137149892.tgf'
+    converting file '2023_Full Rocket.scdoc' (1 of 1) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    attaching to assembly ...
+    attaching to assembly done in 1.984 [s]
+    processing assembly 'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.OccurrenceMoniker`1[[SpaceClaim.IEvaluation, Core]], Core"&gt;&lt;instanceMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IInstance, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:548" /&gt;&lt;originalMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:544" /&gt;&lt;/SnippetV1&gt;</Text>
+          <Id>10000</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:31" /&gt;</ExplodedBodyText>
+          <Id>10001</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:45" /&gt;</ExplodedBodyText>
+          <Id>10002</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:54" /&gt;</ExplodedBodyText>
+          <Id>10003</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:81" /&gt;</ExplodedBodyText>
+          <Id>10004</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:108" /&gt;</ExplodedBodyText>
+          <Id>10005</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:135" /&gt;</ExplodedBodyText>
+          <Id>10006</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:162" /&gt;</ExplodedBodyText>
+          <Id>10007</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:171" /&gt;</ExplodedBodyText>
+          <Id>10008</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:177" /&gt;</ExplodedBodyText>
+          <Id>10009</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+      </Table>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Enclosure' with ID 3
+    processing part '2023_Full Rocket' with ID 5
+    processing part '2023_Full Rocket' with ID 7
+    processing part '2023_Full Rocket' with ID 9
+    processing part '2023_Full Rocket' with ID 11
+    processing part '2023_Full Rocket' with ID 13
+    processing part '2023_Full Rocket' with ID 15
+    processing part '2023_Full Rocket' with ID 17
+    processing part '2023_Full Rocket' with ID 19
+    processing part '2023_Full Rocket' with ID 21
+    processing named selection 'Farfield'
+    processing named selection 'RocketWalls'
+    processing data ...
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg] ...
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 2
+                    Component : 11
+                    Body      : 10
+                    Shell     : 11
+                    Face      : 61
+                    Loop      : 84
+                    Edge      : 98
+                    Vertex    : 49
+                    Surface   : 61
+                    Curve     : 98
+                Tessellation summary:
+                    Face facets  : 2871
+                    Edge segments: 1445
+                Bounding box:
+                    (-1058.688232421875, -3630.9228515625, -1058.688232421875) x (1058.688232421875, 619.0771484375, 1058.688232421875)
+                Assembly component hierarchy:
+                    'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc'
+                      'Enclosure'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                NamedCollections:
+                    'Farfield'
+                    'RocketWalls'
+    
+    
+    exporting FLTG data to file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215137149892.tgf' ...
+    writing face-based mesh file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215137149892.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 10
+        Object region: 21
+        Zone         : 22
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 2.094 [s]
+
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215137149892.tgf"...
+
+nodes: 2790
+edges: 1386
+faces: 2819
+cells: 0
+reading 2790 storage data (id 1, type 41, double precision binary).
+generating pointers...done.
+extracting boundary entities...
+ 2790 boundary nodes.
+ 2819 boundary faces.
+ 11 boundary face zones.
+done.
+analyzing boundary connectivity...done.
+
+
+---------------- Import of 2023_Full_Rocket, consisting of 10 parts/objects, complete. 
+ 
+()
+
+
+> 
+Meshing> (cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton5(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton5(Insert Clipping Planes)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Y" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Y")
+(cx-use-window-id 51)
+(cx-set-camera-relative '(403.024 -973.286 808.316) '(0 0 0) '(0.0598072 0.0803722 0.068597) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(0 0 0) '(0 0 0) '(0 0 0) 0 0)
+(cx-use-window-id 51)
+
+Importing one geom object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\v241\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by m10923578 on CT156-36-2022 winx64 on Wed Nov 20 18:10:51 2024
+    using Python 3.10.9 (remotes/origin/4e018266dafe29ec2836492d71d245fcfd366d07-dirty:4e018266, Jan  3 2) [MSC v.1920 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Nov 27 2023 11:54:13
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892/out173215145049892.tgf'
+    converting file '2023_Full Rocket.scdoc' (1 of 1) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    attaching to assembly ...
+    attaching to assembly done in 1.895 [s]
+    processing assembly 'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.OccurrenceMoniker`1[[SpaceClaim.IEvaluation, Core]], Core"&gt;&lt;instanceMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IInstance, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:548" /&gt;&lt;originalMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:544" /&gt;&lt;/SnippetV1&gt;</Text>
+          <Id>10000</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:31" /&gt;</ExplodedBodyText>
+          <Id>10001</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:45" /&gt;</ExplodedBodyText>
+          <Id>10002</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:54" /&gt;</ExplodedBodyText>
+          <Id>10003</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:81" /&gt;</ExplodedBodyText>
+          <Id>10004</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:108" /&gt;</ExplodedBodyText>
+          <Id>10005</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:135" /&gt;</ExplodedBodyText>
+          <Id>10006</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:162" /&gt;</ExplodedBodyText>
+          <Id>10007</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:171" /&gt;</ExplodedBodyText>
+          <Id>10008</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:2" /&gt;</Text>
+          <ExplodedBodyText>&lt;SnippetV1 sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="3e222d30-c87c-4a03-97b1-29b223c379a5:177" /&gt;</ExplodedBodyText>
+          <Id>10009</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+      </Table>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Enclosure' with ID 3
+    processing part '2023_Full Rocket' with ID 5
+    processing part '2023_Full Rocket' with ID 7
+    processing part '2023_Full Rocket' with ID 9
+    processing part '2023_Full Rocket' with ID 11
+    processing part '2023_Full Rocket' with ID 13
+    processing part '2023_Full Rocket' with ID 15
+    processing part '2023_Full Rocket' with ID 17
+    processing part '2023_Full Rocket' with ID 19
+    processing part '2023_Full Rocket' with ID 21
+    processing named selection 'Farfield'
+    processing named selection 'RocketWalls'
+    processing data ...
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg] ...
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 2
+                    Component : 11
+                    Body      : 10
+                    Shell     : 11
+                    Face      : 61
+                    Loop      : 84
+                    Edge      : 98
+                    Vertex    : 49
+                    Surface   : 61
+                    Curve     : 98
+                Tessellation summary:
+                    Face facets  : 2871
+                    Edge segments: 1445
+                Bounding box:
+                    (-1058.688232421875, -3630.9228515625, -1058.688232421875) x (1058.688232421875, 619.0771484375, 1058.688232421875)
+                Assembly component hierarchy:
+                    'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc'
+                      'Enclosure'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                      '2023_Full Rocket'
+                NamedCollections:
+                    'Farfield'
+                    'RocketWalls'
+    
+    
+    exporting FLTG data to file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215145049892.tgf' ...
+    writing face-based mesh file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215145049892.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 10
+        Object region: 21
+        Zone         : 22
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 2.007 [s]
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 50)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215145049892.tgf"...
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215145049892.tgf"...
+nodes: 2790
+edges: 1386
+faces: 2819
+cells: 0
+reading 2790 storage data (id 1, type 41, double precision binary).
+generating pointers...done.
+extracting boundary entities...
+ 2790 boundary nodes.
+ 2819 boundary faces.
+ 11 boundary face zones.
+done.
+analyzing boundary connectivity...done.
+
+---------------- Import of 2023_Full_Rocket, consisting of 10 parts/objects, complete. 
+ 
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-set-camera-relative '(1093.67 -43838.4 -6743.77) '(0 0 0) '(1.14498 -0.112346 0.979862) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(6219.45 23057.9 11396.9) '(0 0 0) '(-0.933756 0.300881 -0.141563) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(3998.68 3473.68 -6269.69) '(0 0 0) '(0.00458345 0.000126481 0.00352845) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-22.8223 181.27 -1.47852) '(0 0 0) '(-0.00514212 -0.000670969 -0.00256535) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-1288.22 4512.97 -26371.3) '(0 0 0) '(0.156359 0.0449364 -0.0251476) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-10822.9 2363.68 -10047.9) '(0 0 0) '(-0.00786288 -0.0060336 0.0142487) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(1815 -115.341 1106.55) '(0 0 0) '(0 0 0) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-9192.45 -1190.78 -4545.91) '(0 0 0) '(0.0197321 0.0154799 -0.0388195) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(5983.86 93.252 2197.07) '(0 0 0) '(0 0 0) 0 0)
+
+Importing one geom object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\v241\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by m10923578 on CT156-36-2022 winx64 on Wed Nov 20 18:14:07 2024
+    using Python 3.10.9 (remotes/origin/4e018266dafe29ec2836492d71d245fcfd366d07-dirty:4e018266, Jan  3 2) [MSC v.1920 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Nov 27 2023 11:54:13
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892/out173215164649892.tgf'
+    converting file '2023_Full Rocket.scdoc' (1 of 1) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    attaching to assembly ...
+    attaching to assembly done in 1.664 [s]
+    processing assembly 'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.OccurrenceMoniker`1[[SpaceClaim.IEvaluation, Core]], Core"&gt;&lt;instanceMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IInstance, Core]], Core" refId="9788947a-a579-4b9e-ba13-527c37ccf02e:69" /&gt;&lt;originalMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="9788947a-a579-4b9e-ba13-527c37ccf02e:65" /&gt;&lt;/SnippetV1&gt;</Text>
+          <Id>10000</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+      </Table>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Enclosure' with ID 3
+    processing named selection 'Farfield'
+    processing named selection 'RocketWalls'
+    processing named selection 'Nosecone'
+    processing data ...
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg] ...
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 3
+                    Component : 2
+                    Body      : 1
+                    Shell     : 2
+                    Face      : 29
+                    Loop      : 38
+                    Edge      : 57
+                    Vertex    : 36
+                    Surface   : 29
+                    Curve     : 57
+                Tessellation summary:
+                    Face facets  : 704
+                    Edge segments: 372
+                Bounding box:
+                    (-1182.781982421875, -3644.57275390625, -1182.436645507813) x (1181.400756835938, 768.9771118164063, 1182.436645507813)
+                Assembly component hierarchy:
+                    'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc'
+                      'Enclosure'
+                NamedCollections:
+                    'Farfield'
+                    'RocketWalls'
+                    'Nosecone'
+    
+    
+    exporting FLTG data to file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215164649892.tgf' ...
+    writing face-based mesh file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215164649892.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 1
+        Object region: 4
+        Zone         : 7
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 1.736 [s]
+
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215164649892.tgf"...
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215164649892.tgf"...
+nodes: 712
+edges: 372
+faces: 704
+cells: 0
+reading 712 storage data (id 1, type 41, double precision binary).
+generating pointers...done.
+extracting boundary entities...
+ 712 boundary nodes.
+ 704 boundary faces.
+ 3 boundary face zones.
+done.
+analyzing boundary connectivity...done.
+
+---------------- Import of 2023_Full_Rocket, consisting of one single part/object , complete. 
+ 
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-set-camera-relative '(4768.22 -9242.5 4230.69) '(0 0 0) '(0.211384 0.205612 0.210783) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-269.209 720.764 -398.969) '(0 0 0) '(-0.187217 -0.169789 -0.18157) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-225.3 337.359 -222.365) '(0 0 0) '(-0.0221546 -0.0276875 -0.0195588) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(2496.97 -5050.09 2813.93) '(0 0 0) '(0.160905 0.161339 0.146859) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera '(14392.5 10975.6 12755.6) '(-573.373 -186.15 -1042.42) '(-0.337082 0.876581 -0.343487) 8558.17 3604.14 "perspective")
+
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-3199.44 5416.47 -2213.75) '(0 0 0) '(-0.139668 -0.133633 -0.126344) 0 0)
+
+---------------- The Global Min size was adjusted to 0.25 
+
+---- Warning--- Note that size controls based on edges cannot be used in a Size Control File
+
+---------------- A curvature angle of 10 was added to the edges of curvature_1
+
+---------------- A curvature angle of 10 was added to  curvature_1
+deleting edge-zone origin-rocketwalls__14 (id 14) 
+deleting edge-zone origin-rocketwalls__15 (id 15) 
+deleting edge-zone origin-nosecone:rocketwalls:enclosure-enclosure__11 (id 11) 
+deleting edge-zone origin-nosecone:rocketwalls:enclosure-enclosure__12 (id 12) 
+removed 263 nodes.
+Deleting curvature_1_edges
+Deleting curvature_1_faces
+
+---------------- A curvature angle of 10 was added to  curvature_1
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\TaskObject3.msh.h5" ...
+writing 1 node zones
+writing 4 edge zones 
+writing 3 face zones 
+writing node curvature data...
+done.    processing size functions/scoped sizing to create Size Field...
+
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\2023_Full_Rocket.sf"...
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\2023_Full_Rocket.sf"...
+Done.
+
+
+Importing one mesh object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\v241\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by m10923578 on CT156-36-2022 winx64 on Wed Nov 20 18:16:23 2024
+    using Python 3.10.9 (remotes/origin/4e018266dafe29ec2836492d71d245fcfd366d07-dirty:4e018266, Jan  3 2) [MSC v.1920 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Nov 27 2023 11:54:13
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892/out173215178249892.tgf'
+    converting file '2023_Full Rocket.scdoc.pmdb' (1 of 1) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\\\2023_Full Rocket.scdoc.pmdb' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    initializing part manager from file ...
+    processing assembly 'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.OccurrenceMoniker`1[[SpaceClaim.IEvaluation, Core]], Core"&gt;&lt;instanceMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IInstance, Core]], Core" refId="9788947a-a579-4b9e-ba13-527c37ccf02e:69" /&gt;&lt;originalMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="9788947a-a579-4b9e-ba13-527c37ccf02e:65" /&gt;&lt;/SnippetV1&gt;</Text>
+          <Id>10000</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+      </Table>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Enclosure' with ID 3
+    processing named selection 'Farfield'
+    processing named selection 'RocketWalls'
+    processing named selection 'Nosecone'
+    processing data ...
+    loading size function background grid from file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\\\2023_Full_Rocket.sf' ...
+    reading size function background grid file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\\\2023_Full_Rocket.sf' ...
+     Read 277528 vertices
+    initializing size function background grid done in 0.103 [s]
+    Error: Breakout detected
+    
+    Error: Front could not be closed at e848 (-0.024549 18.977125 0.012759)
+    
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg] ...
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 3
+                    Component : 2
+                    Body      : 1
+                    Shell     : 2
+                    Face      : 29
+                    Loop      : 38
+                    Edge      : 57
+                    Vertex    : 36
+                    Surface   : 29
+                    Curve     : 57
+                Tessellation summary:
+                    Face facets  : 68136
+                    Edge segments: 1823
+                Bounding box:
+                    (-1182.781982421875, -3644.57275390625, -1182.744506835938) x (1182.68603515625, 768.9771118164063, 1182.740112304688)
+                Assembly component hierarchy:
+                    'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc'
+                      'Enclosure'
+                NamedCollections:
+                    'Farfield'
+                    'RocketWalls'
+                    'Nosecone'
+    
+    
+    exporting FLTG data to file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215178249892.tgf' ...
+    writing face-based mesh file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215178249892.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 1
+        Object region: 5
+        Zone         : 8
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 0.742 [s]
+        ======== Command Execution Log Manager ========
+        Number of execution logs: 1
+        MeshingModelCommandExecLog
+            Label = 'ANSYS_MESH_FM_WARNING_ID_MESHINGMODEL_TESSELLATION_CREATION_ENTITIES_WHERE_CONFORMAL_TESSELLATION_FAILED'
+            EntityIDs = (176)
+            Points = ()
+    
+    
+
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215178249892.tgf"...
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215178249892.tgf"...
+nodes: 35900
+edges: 1823
+faces: 68136
+cells: 0
+reading 35900 storage data (id 1, type 41, double precision binary).
+appending mesh...
+done.
+generating pointers...done.
+extracting boundary entities...
+ 36612 boundary nodes.
+ 68840 boundary faces.
+ 7 boundary face zones.
+done.
+
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\\2023_Full_Rocket.sf"...
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\\2023_Full_Rocket.sf"...
+ Read 277528 vertices
+Deleted 0 faces with 3 free edges.
+Deleted 0 faces with 2 free edges.
+Deleted 0 faces with 3 free edges.
+Deleted 0 faces with 2 free edges.
+removed 21 faces.
+0 faces marked.
+
+    computing regions...done
+Deleting import_curvature_0
+Deleting import_proximity_0
+Deleting curvature_1_faces
+    processing size functions/scoped sizing to create Size Field...
+
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\2023_Full_Rocket.sf"...
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\2023_Full_Rocket.sf"...
+Done.
+
+
+remeshing...
+
+---------------- 1 disconnected regions have been detected 
+
+
+------------------------- --------------------- -------------------- ---------------- ----------
+                     name skewed-cells (> 0.80)    averaged-skewness maximum-skewness face count
+------------------------- --------------------- -------------------- ---------------- ----------
+
+      enclosure-enclosure                     0          0.011992897       0.53305148      69922
+        dead0-rocketwalls                     0          0.013039124       0.53305148      60214
+------------------------- --------------------- -------------------- ---------------- ----------
+                     name skewed-cells (> 0.80)    averaged-skewness maximum-skewness face count
+------------------------- --------------------- -------------------- ---------------- ----------
+
+      enclosure-enclosure                     0          0.011992897       0.53305148      69922
+
+---------------- After Surface mesh, the model consists of 1 fluid/solid regions and 1 voids.
+
+---------------- Surface Meshing of 2023_Full_Rocket complete in  0.22 minutes, with a maximum skewness of  0.53. 
+
+
+---- Warning--- During Surface mesh, failed faces were identified and automatically repaired.
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\TaskObject3.msh.h5" ...
+3D mesh
+nodes: 712
+edges: 372
+faces: 704 
+cells: 0 
+reading 1 node zones
+reading 4 edge zones
+reading 3 face zones
+generating pointers...done.
+extracting boundary entities...
+ 712 boundary nodes.
+ 704 boundary faces.
+ 3 boundary face zones.
+done.
+analyzing boundary connectivity...done.
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\TaskObject3.msh.h5" ...
+writing 1 node zones
+writing 4 edge zones 
+writing 3 face zones 
+writing node curvature data...
+done.    processing size functions/scoped sizing to create Size Field...
+
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\2023_Full_Rocket.sf"...
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\2023_Full_Rocket.sf"...
+Done.
+
+
+Importing one mesh object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\v241\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by m10923578 on CT156-36-2022 winx64 on Wed Nov 20 18:17:02 2024
+    using Python 3.10.9 (remotes/origin/4e018266dafe29ec2836492d71d245fcfd366d07-dirty:4e018266, Jan  3 2) [MSC v.1920 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Nov 27 2023 11:54:13
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892/out173215182149892.tgf'
+    converting file '2023_Full Rocket.scdoc.pmdb' (1 of 1) from Workbench to FLTG using output path 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\\\2023_Full Rocket.scdoc.pmdb' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    initializing part manager from file ...
+    processing assembly 'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <Text>&lt;SnippetV1 sctype="SpaceClaim.OccurrenceMoniker`1[[SpaceClaim.IEvaluation, Core]], Core"&gt;&lt;instanceMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IInstance, Core]], Core" refId="9788947a-a579-4b9e-ba13-527c37ccf02e:69" /&gt;&lt;originalMoniker sctype="SpaceClaim.BasicMoniker`1[[SpaceClaim.IEvaluation, Core]], Core" refId="9788947a-a579-4b9e-ba13-527c37ccf02e:65" /&gt;&lt;/SnippetV1&gt;</Text>
+          <Id>10000</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+      </Table>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Enclosure' with ID 3
+    processing named selection 'Farfield'
+    processing named selection 'RocketWalls'
+    processing named selection 'Nosecone'
+    processing data ...
+    loading size function background grid from file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\\\2023_Full_Rocket.sf' ...
+    reading size function background grid file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\\\2023_Full_Rocket.sf' ...
+     Read 277423 vertices
+    initializing size function background grid done in 0.108 [s]
+    Error: Breakout detected
+    
+    Error: Front could not be closed at e371 (-0.024549 18.977125 0.012759)
+    
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg] ...
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 3
+                    Component : 2
+                    Body      : 1
+                    Shell     : 2
+                    Face      : 29
+                    Loop      : 38
+                    Edge      : 57
+                    Vertex    : 36
+                    Surface   : 29
+                    Curve     : 57
+                Tessellation summary:
+                    Face facets  : 68048
+                    Edge segments: 1823
+                Bounding box:
+                    (-1182.781982421875, -3644.57275390625, -1182.744506835938) x (1182.68603515625, 768.9771118164063, 1182.740112304688)
+                Assembly component hierarchy:
+                    'C:\\Scratch\\WA\\certRocket\\CFD\\2023_Full Rocket.scdoc'
+                      'Enclosure'
+                NamedCollections:
+                    'Farfield'
+                    'RocketWalls'
+                    'Nosecone'
+    
+    
+    exporting FLTG data to file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215182149892.tgf' ...
+    writing face-based mesh file 'C:\\Scratch\\WA\\certRocket\\CFD\\FM_CT156-36-2022_49892\\out173215182149892.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 1
+        Object region: 5
+        Zone         : 8
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 0.738 [s]
+        ======== Command Execution Log Manager ========
+        Number of execution logs: 1
+        MeshingModelCommandExecLog
+            Label = 'ANSYS_MESH_FM_WARNING_ID_MESHINGMODEL_TESSELLATION_CREATION_ENTITIES_WHERE_CONFORMAL_TESSELLATION_FAILED'
+            EntityIDs = (176)
+            Points = ()
+    
+    
+
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215182149892.tgf"...
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892/out173215182149892.tgf"...
+nodes: 35856
+edges: 1823
+faces: 68048
+cells: 0
+reading 35856 storage data (id 1, type 41, double precision binary).
+appending mesh...
+done.
+generating pointers...done.
+extracting boundary entities...
+ 36568 boundary nodes.
+ 68752 boundary faces.
+ 7 boundary face zones.
+done.
+
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\\2023_Full_Rocket.sf"...
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\\2023_Full_Rocket.sf"...
+ Read 277423 vertices
+Deleted 0 faces with 3 free edges.
+Deleted 0 faces with 2 free edges.
+Deleted 0 faces with 3 free edges.
+Deleted 0 faces with 2 free edges.
+removed 21 faces.
+0 faces marked.
+
+    computing regions...done
+Deleting import_curvature_0
+Deleting import_proximity_0
+Deleting curvature_1_faces
+    processing size functions/scoped sizing to create Size Field...
+
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\2023_Full_Rocket.sf"...
+Writing "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\2023_Full_Rocket.sf"...
+Done.
+
+
+remeshing...
+
+---------------- 1 disconnected regions have been detected 
+
+
+------------------------- --------------------- -------------------- ---------------- ----------
+                     name skewed-cells (> 0.80)    averaged-skewness maximum-skewness face count
+------------------------- --------------------- -------------------- ---------------- ----------
+
+      enclosure-enclosure                     0          0.012480281       0.61902273      69894
+        dead0-rocketwalls                     0          0.013605609       0.61902273      60186
+------------------------- --------------------- -------------------- ---------------- ----------
+                     name skewed-cells (> 0.80)    averaged-skewness maximum-skewness face count
+------------------------- --------------------- -------------------- ---------------- ----------
+
+      enclosure-enclosure                     0          0.012480281       0.61902273      69894
+
+---------------- After Surface mesh, the model consists of 1 fluid/solid regions and 1 voids.
+
+---------------- Surface Meshing of 2023_Full_Rocket complete in  0.25 minutes, with a maximum skewness of  0.62. 
+
+
+---- Warning--- During Surface mesh, failed faces were identified and automatically repaired.
+(newline)
+
+
+Meshing> (cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in X" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in X")
+(cx-use-window-id 51)
+(cx-set-camera-relative '(14819.5 -22709.5 -2243.63) '(0 0 0) '(0.439926 0.283756 0.379239) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-2047.33 6987.07 -738.717) '(0 0 0) '(-0.329982 -0.111252 -0.151535) 0 0)
+Reading "C:\Scratch\WA\certRocket\CFD\FM_CT156-36-2022_49892\TaskObject3.msh.h5" ...
+3D mesh
+nodes: 712
+edges: 372
+faces: 704 
+cells: 0 
+reading 1 node zones
+reading 4 edge zones
+reading 3 face zones
+generating pointers...done.
+extracting boundary entities...
+ 712 boundary nodes.
+ 704 boundary faces.
+ 3 boundary face zones.
+done.
+analyzing boundary connectivity...done.
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-set-camera-relative '(7004.34 -8763.39 1271.29) '(0 0 0) '(0.211889 0.195275 0.17953) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(2342.22 -13471.4 2811.21) '(0 0 0) '(0.268948 0.0919318 0.215701) 0 0)
+S_CreateRefinementRegions:
+ RefinementRegionsName : rocketwall-refinement
+ CreationMethod : Offset Surface
+ BOIMaxSize : 0.5
+ BOISizeName : boi_1
+ SelectionType : label
+ ZoneSelectionList : ()
+ ZoneLocation : ()
+ LabelSelectionList : (rocketwalls)
+ ObjectSelectionList : ()
+ ZoneSelectionSingle : ()
+ ObjectSelectionSingle : ()
+ BoundingBoxObject : (__map__ (SizeRelativeLength . Ratio relative to geometry size) (Xmax . 0) (XmaxRatio . 0.1) (Xmin . 0) (XminRatio . 0.1) (Ymax . 0) (YmaxRatio . 0.1) (Ymin . 0) (YminRatio . 0.1) (Zmax . 0) (ZmaxRatio . 0.1) (Zmin . 0) (ZminRatio . 0.1))
+ OffsetObject : (__map__ (AspectRatio . 5) (BoundaryLayerHeight . 110.33875) (BoundaryLayerLevels . 1) (CrossWakeGrowthFactor . 1.1) (DefeaturingSize . 0.5) (EdgeSelectionList) (FirstHeight . 0.01) (FlipDirection . #t) (FlowDirection . Y) (LastRatioPercentage . 20) (MptMethodType . Automatic) (NumberOfLayers . 4) (OffsetMethodType . uniform) (Rate . 1.2) (ShowCoordinates . #t) (WakeGrowthFactor . 1.8) (WakeLevels . 2) (X . 0) (Y . 0) (Z . 0))
+ CylinderObject : (__map__ (HeightBackInc . 0) (HeightFrontInc . 0) (HeightNode . none) (Node1 . none) (Node2 . none) (Node3 . none) (Options . 3 Arc Nodes) (Radius1 . 0) (Radius2 . 0))
+ VolumeFill : hexcore
+
+offset-name: rocketwall-refinement
+flow-direction: (0 -1 0)
+object-list: (4 3)
+zone-list: (origin-nosecone:rocketwalls:enclosure-enclosure origin-rocketwalls)
+defeaturing-size: 0.5
+bl-height: 110.33875
+bl-levels: 1
+wake-growth-factor: 1.8
+wake-levels: 2
+upstream-growth-factor: 1.1
+cross-wake-growth-factor: 1.1 Error in the fluent (tgrid) process : ended abnormally
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: #f
+
+Error: state/object/execute-command:Exception encountered in S_ExecuteTask: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: ()
+
+Error: state/object/execute-command:Exception encountered in S_AddChildAndUpdate: state/object/execute-command:Exception encountered in S_ExecuteTask: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: ()
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 17516 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 33148 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 4764 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 37152 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 4 PID 3708 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 5 PID 36360 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 6 PID 7408 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 7 PID 51080 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 8 PID 54976 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 9 PID 5728 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 10 PID 39968 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 11 PID 38232 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 12 PID 40128 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 13 PID 51372 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 14 PID 21304 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 15 PID 30932 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 16 PID 43628 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 17 PID 27800 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 18 PID 29556 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 19 PID 1304 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 20 PID 40588 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 22 PID 41972 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 23 PID 26452 RUNNING AT CT156-36-2022
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+(cx-gui-do cx-activate-item "Question*Cancel")
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+S_CreateRefinementRegions:
+ RefinementRegionsName : rocketwall-refinement
+ CreationMethod : Offset Surface
+ BOIMaxSize : 2
+ BOISizeName : rocketwall-refinement
+ SelectionType : label
+ ZoneSelectionList : ()
+ ZoneLocation : ()
+ LabelSelectionList : (rocketwalls)
+ ObjectSelectionList : ()
+ ZoneSelectionSingle : ()
+ ObjectSelectionSingle : ()
+ BoundingBoxObject : (__map__ (SizeRelativeLength . Ratio relative to geometry size) (Xmax . 0) (XmaxRatio . 0.1) (Xmin . 0) (XminRatio . 0.1) (Ymax . 0) (YmaxRatio . 0.1) (Ymin . 0) (YminRatio . 0.1) (Zmax . 0) (ZmaxRatio . 0.1) (Zmin . 0) (ZminRatio . 0.1))
+ OffsetObject : (__map__ (AspectRatio . 5) (BoundaryLayerHeight . 110.33875) (BoundaryLayerLevels . 1) (CrossWakeGrowthFactor . 1.1) (DefeaturingSize . 5) (EdgeSelectionList) (FirstHeight . 0.01) (FlipDirection . #t) (FlowDirection . Y) (LastRatioPercentage . 20) (MptMethodType . Automatic) (NumberOfLayers . 4) (OffsetMethodType . uniform) (Rate . 1.2) (ShowCoordinates . #t) (WakeGrowthFactor . 1.8) (WakeLevels . 2) (X . 0) (Y . 0) (Z . 0))
+ CylinderObject : (__map__ (HeightBackInc . 0) (HeightFrontInc . 0) (HeightNode . none) (Node1 . none) (Node2 . none) (Node3 . none) (Options . 3 Arc Nodes) (Radius1 . 0) (Radius2 . 0))
+ VolumeFill : hexcore
+
+Error: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: #f
+
+Error: state/object/execute-command:Exception encountered in S_ExecuteTask: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+S_CreateRefinementRegions:
+ RefinementRegionsName : rocketwall-refinement
+ CreationMethod : Offset Surface
+ BOIMaxSize : 2
+ BOISizeName : rocketwall-refinement
+ SelectionType : label
+ ZoneSelectionList : ()
+ ZoneLocation : ()
+ LabelSelectionList : (rocketwalls)
+ ObjectSelectionList : ()
+ ZoneSelectionSingle : ()
+ ObjectSelectionSingle : ()
+ BoundingBoxObject : (__map__ (SizeRelativeLength . Ratio relative to geometry size) (Xmax . 0) (XmaxRatio . 0.1) (Xmin . 0) (XminRatio . 0.1) (Ymax . 0) (YmaxRatio . 0.1) (Ymin . 0) (YminRatio . 0.1) (Zmax . 0) (ZmaxRatio . 0.1) (Zmin . 0) (ZminRatio . 0.1))
+ OffsetObject : (__map__ (AspectRatio . 5) (BoundaryLayerHeight . 110.33875) (BoundaryLayerLevels . 1) (CrossWakeGrowthFactor . 1.1) (DefeaturingSize . 5) (EdgeSelectionList) (FirstHeight . 0.01) (FlipDirection . #t) (FlowDirection . Y) (LastRatioPercentage . 20) (MptMethodType . Automatic) (NumberOfLayers . 4) (OffsetMethodType . uniform) (Rate . 1.2) (ShowCoordinates . #t) (WakeGrowthFactor . 1.8) (WakeLevels . 2) (X . 0) (Y . 0) (Z . 0))
+ CylinderObject : (__map__ (HeightBackInc . 0) (HeightFrontInc . 0) (HeightNode . none) (Node1 . none) (Node2 . none) (Node3 . none) (Options . 3 Arc Nodes) (Radius1 . 0) (Radius2 . 0))
+ VolumeFill : hexcore
+
+Error: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: #f
+
+Error: state/object/execute-command:Exception encountered in S_ExecuteTask: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+
+Error: * (multiply): invalid argument [1]: wrong type [not a number]
+Error Object: ()
+S_CreateRefinementRegions:
+ RefinementRegionsName : rocketwall-refinement
+ CreationMethod : Offset Surface
+ BOIMaxSize : 2
+ BOISizeName : rocketwall-refinement
+ SelectionType : label
+ ZoneSelectionList : ()
+ ZoneLocation : ()
+ LabelSelectionList : (rocketwalls)
+ ObjectSelectionList : ()
+ ZoneSelectionSingle : ()
+ ObjectSelectionSingle : ()
+ BoundingBoxObject : (__map__ (SizeRelativeLength . Ratio relative to geometry size) (Xmax . 0) (XmaxRatio . 0.1) (Xmin . 0) (XminRatio . 0.1) (Ymax . 0) (YmaxRatio . 0.1) (Ymin . 0) (YminRatio . 0.1) (Zmax . 0) (ZmaxRatio . 0.1) (Zmin . 0) (ZminRatio . 0.1))
+ OffsetObject : (__map__ (AspectRatio . 5) (BoundaryLayerHeight . 110.33875) (BoundaryLayerLevels . 1) (CrossWakeGrowthFactor . 1.1) (DefeaturingSize . 5) (EdgeSelectionList) (FirstHeight . 0.01) (FlipDirection . #t) (FlowDirection . Y) (LastRatioPercentage . 20) (MptMethodType . Automatic) (NumberOfLayers . 4) (OffsetMethodType . uniform) (Rate . 1.2) (ShowCoordinates . #t) (WakeGrowthFactor . 1.8) (WakeLevels . 2) (X . 0) (Y . 0) (Z . 0))
+ CylinderObject : (__map__ (HeightBackInc . 0) (HeightFrontInc . 0) (HeightNode . none) (Node1 . none) (Node2 . none) (Node3 . none) (Options . 3 Arc Nodes) (Radius1 . 0) (Radius2 . 0))
+ VolumeFill : hexcore
+
+Error: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: #f
+
+Error: state/object/execute-command:Exception encountered in S_ExecuteTask: An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+
+An error occured during task update
+Error Object: ()
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Mesh...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "2023_Full Rocket.msh.h5") "CFF Mesh Files (*.msh.h5 )")
+/exit y
+Auto-Transcript Stop Time:  18:24:47, 20 Nov 2024 Mountain Standard Time 
+Total Transcript Time: 15 Minute 50 Second.

@@ -1,0 +1,51 @@
+Starting a new Nexus server instance
+Beginning migration setup
+Migrating the database...
+Migrating 3D geometry...
+Migration complete.
+Collecting static files...
+Static files collection failed with the error:
+[WinError 5] Access is denied: 'C:\\Program Files\\ANSYS Inc\\v241\\CEI\\nexus241\\django\\static\\ansys\\nexus\\angular'
+Static files collection output:
+Building new nginx config file: C:\Scratch\WA\certRocket\CFD\rocketMeshSolution.cffdb\rocketMeshSolution-Solve\Simulation_Reports\nginx\nexus.conf
+Launching Nexus server on port: 45756
+Launching Nginx server on port: 22672
+Nginx running as process id: 49288
+Verbose output mode enabled.
+Monitoring the Nexus server...
+127.0.0.1 - nexus [20/Nov/2024:16:57:18 -0700] "GET /item/api_version/ HTTP/1.1" 200 57 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:18 -0700] "GET /item/api_version/ HTTP/1.1" 200 57 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:18 -0700] "GET /item/api_version/ HTTP/1.1" 200 57 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:19 -0700] "PUT /session/api_detail/2cf0a2b7-a79b-11ef-a59e-7486e217d18e?version=1.0 HTTP/1.1" 200 181 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:19 -0700] "PUT /dataset/api_detail/2d1d75d0-a79b-11ef-8121-7486e217d18e?version=1.0 HTTP/1.1" 200 139 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:19 -0700] "GET /item/api_list?version=1.0&guidsonly=1&query=A%7Cd_guid%7Cguid%7C2d1d75d0-a79b-11ef-8121-7486e217d18e%3B HTTP/1.1" 301 5 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:19 -0700] "GET /item/api_list/?version=1.0&guidsonly=1&query=A%7Cd_guid%7Cguid%7C2d1d75d0-a79b-11ef-8121-7486e217d18e%3B HTTP/1.1" 200 16 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:19 -0700] "GET /item/api_list?version=1.0&guidsonly=1&query=A%7Ci_tags%7Ccont%7C'Design%20Point'='Base%20DP'%3B HTTP/1.1" 301 5 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:19 -0700] "GET /item/api_list/?version=1.0&guidsonly=1&query=A%7Ci_tags%7Ccont%7C'Design%20Point'='Base%20DP'%3B HTTP/1.1" 200 16 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:20 -0700] "PUT /item/api_detail/2db68913-a79b-11ef-af2d-7486e217d18e?version=1.0 HTTP/1.1" 200 452 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:20 -0700] "PUT /item/api_detail/2de476ef-a79b-11ef-86ff-7486e217d18e?version=1.0 HTTP/1.1" 200 408 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:21 -0700] "PUT /item/api_payload/2de476ef-a79b-11ef-86ff-7486e217d18e HTTP/1.1" 201 10 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:21 -0700] "PUT /item/api_detail/2e49a539-a79b-11ef-a04a-7486e217d18e?version=1.0 HTTP/1.1" 200 677 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:30 -0700] "PUT /item/api_detail/338f3d7f-a79b-11ef-8054-7486e217d18e?version=1.0 HTTP/1.1" 200 886 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:31 -0700] "PUT /item/api_detail/33f8ea6e-a79b-11ef-801f-7486e217d18e?version=1.0 HTTP/1.1" 200 646 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:31 -0700] "PUT /item/api_detail/345d174f-a79b-11ef-b5b1-7486e217d18e?version=1.0 HTTP/1.1" 200 720 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:32 -0700] "PUT /item/api_detail/34b50821-a79b-11ef-a6af-7486e217d18e?version=1.0 HTTP/1.1" 200 716 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:32 -0700] "PUT /item/api_detail/3502ffd2-a79b-11ef-b666-7486e217d18e?version=1.0 HTTP/1.1" 200 2199 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:32 -0700] "PUT /item/api_detail/35313bc7-a79b-11ef-a0ab-7486e217d18e?version=1.0 HTTP/1.1" 200 1803 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:33 -0700] "PUT /item/api_detail/35637955-a79b-11ef-938e-7486e217d18e?version=1.0 HTTP/1.1" 200 6502 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:33 -0700] "PUT /item/api_detail/35955d80-a79b-11ef-b439-7486e217d18e?version=1.0 HTTP/1.1" 200 934 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:33 -0700] "PUT /item/api_detail/35c5627e-a79b-11ef-a59a-7486e217d18e?version=1.0 HTTP/1.1" 200 4434 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:37 -0700] "PUT /item/api_detail/37c90e96-a79b-11ef-b7c0-7486e217d18e?version=1.0 HTTP/1.1" 200 839 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:38 -0700] "PUT /item/api_detail/38300dd5-a79b-11ef-b2a2-7486e217d18e?version=1.0 HTTP/1.1" 200 992 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:38 -0700] "PUT /item/api_detail/389426e3-a79b-11ef-ba0c-7486e217d18e?version=1.0 HTTP/1.1" 200 781 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:40 -0700] "PUT /item/api_detail/3991349a-a79b-11ef-93d5-7486e217d18e?version=1.0 HTTP/1.1" 200 739 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:41 -0700] "PUT /item/api_detail/3a53730e-a79b-11ef-bdf4-7486e217d18e?version=1.0 HTTP/1.1" 200 92973 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:43 -0700] "PUT /item/api_detail/3b2b2ba9-a79b-11ef-a6cc-7486e217d18e?version=1.0 HTTP/1.1" 200 423 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:43 -0700] "PUT /item/api_payload/3b2b2ba9-a79b-11ef-a6cc-7486e217d18e HTTP/1.1" 201 10 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:46 -0700] "PUT /item/api_detail/3cb5beeb-a79b-11ef-b251-7486e217d18e?version=1.0 HTTP/1.1" 200 475 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:16:57:46 -0700] "PUT /item/api_payload/3cb5beeb-a79b-11ef-b251-7486e217d18e HTTP/1.1" 201 10 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:18:33:17 -0700] "GET /item/api_version/ HTTP/1.1" 200 57 "-" "python-requests/2.20.1"
+127.0.0.1 - nexus [20/Nov/2024:18:33:18 -0700] "GET /item/api_stop_local/ HTTP/1.1" 502 157 "-" "python-requests/2.20.1"
+2024/11/20 18:33:18 [error] 35464#35716: *34 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET /item/api_stop_local/ HTTP/1.1", upstream: "http://127.0.0.1:45756/item/api_stop_local/", host: "127.0.0.1:22672"
+Shutting down the server. Child processes stopped.
+Shutting down the server.
